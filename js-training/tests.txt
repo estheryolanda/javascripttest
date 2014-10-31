@@ -1,0 +1,88 @@
+Smoke Tests=  A smoke test should determine if any part is not working, or is outright missing
+In the case of APIs, it should be sufficient to call every method once and get any response, just to make sure it is there.
+
+1.verify the user information is getting.
+2. verify Projects are listed.
+3. verify the items of a project are listed.
+4. verify the list of filters are displayed.
+5. verify after a filter is applied the items are listed.
+6. verify items are displayed.
+7. verify a item can be retrieved.
+8. Verify the root of a item are retrieved
+9. Verify the Done root of a item can be retrieved
+10. Verify the done items are displayed if a filter is applied.
+
+
+
+Sanity Tests
+Sanity tests verify that the smoke tests are getting back something reasonable.
+You are checking that the call is correctly interpreting the inputs and correctly showing you the returned data.
+
+1.verify the user information retrieved is correct.
+2. verify Projects are listed are the existent projects.
+3. verify the items of a project listed are the expected.
+4. verify the list of filters displayed are the defined.
+5. verify after a filter is applied the items listed meet the condition.
+6. verify items are displayed are all defined.
+7. verify a item retrieved the information is of the item specified.
+8. Verify the root of a item retrieved is the correct
+9. Verify the Done root of a item retrieved is the specified
+10. Verify the done items displayed after a filter applied meet with the condition.
+
+
+CRUD Tests
+c  create
+r   read
+u  update
+d  delete
+CRUD tests are tests that verify that object are being written correctly in the database: Create – Read – Update – Delete. 
+Another problem area that CRUD tests can reveal are concurrency issues. If you make 5 parallel withdrawal calls for all of your money, only one of the calls should succeed. If more than one succeeds, this is often a problem with incorrect locking mechanisms.
+
+1. verify a new user can be created.
+2. Verify if the user email can be updated.
+3.verify  a user can be deleted.
+4. verify a Project can be created.
+5. Verify aProject can be edited.
+6. Verify a project can be removed.
+7. Verify  a new item can be created.
+8. verify a item can be unchecked (updated).
+9. Verify a item can be checked (updated).
+10 Verify a item can be deleted.
+
+
+
+
+Negative Tests
+The purpose of any test is to try to break the application. A more specific way of testing is to use negative tests to bring out error messages
+1. verify an error is displayed if the get project by id receive an word instead of a id number.
+2. veriffy an error is displayed if the get project by id does not receive a id number the value is empty.
+3. verify an error is displayed trying to created a user without email.
+4. verify an error is displayed trying to created a user without password.
+5. verify an error is displayed trying to created a user without FullName.
+6. Verify an error is displayed if the proyect name is short.
+7. verify an error is displayed if the email is a invalid email address.
+8. Verify an error is dispalyed if item name is too short.
+9. Verify an error is displayed if the Get icons by Id received an invalid ID.
+10. Verify an error is displayed if the proyect id is invalied during item creation.
+
+
+
+Boundary Tests
+Boundary tests are a special case of negative tests. If you have a field that is suppose to accept only a certain range of values, then it is a good idea to test what happens exactly at the boundary. For example, if a field accepts any integer value between 1 and 10, inclusive, you might want to try all the following values.
+ALUE	EXPECTED RESULT
+0	Error
+1	Positive
+2	Positive
+9	Positive
+10	Positive
+11	Erro
+
+1. verify the checked option with the next values:
+hola	Error
+78766	Error
+* the checked option only true,false values	
+
+Security Tests
+
+Security Tests
+Security tests are another special case of negative tests. These involve sending specially crafted inputs to the AUT in an attempt to try to bypass normal access restrictions, and trick the application into revealing information which should not be revealed.
