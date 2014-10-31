@@ -12,8 +12,6 @@ In the case of APIs, it should be sufficient to call every method once and get a
 9. Verify the Done root of a item can be retrieved
 10. Verify the done items are displayed if a filter is applied.
 
-
-
 Sanity Tests
 Sanity tests verify that the smoke tests are getting back something reasonable.
 You are checking that the call is correctly interpreting the inputs and correctly showing you the returned data.
@@ -28,7 +26,6 @@ You are checking that the call is correctly interpreting the inputs and correctl
 8. Verify the root of a item retrieved is the correct
 9. Verify the Done root of a item retrieved is the specified
 10. Verify the done items displayed after a filter applied meet with the condition.
-
 
 CRUD Tests
 c  create
@@ -48,8 +45,6 @@ Another problem area that CRUD tests can reveal are concurrency issues. If you m
 8. verify a item can be unchecked (updated).
 9. Verify a item can be checked (updated).
 10 Verify a item can be deleted.
-
-
 
 
 Negative Tests
